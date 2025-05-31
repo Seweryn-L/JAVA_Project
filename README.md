@@ -64,3 +64,39 @@ The application is configured via `config.yaml` (see `config/` directory for def
 git clone https://github.com/yourusername/brick-transport-simulation.git
 cd brick-transport-simulation
 ```
+
+The project was developed using **IntelliJ IDEA** by JetBrains – a widely adopted IDE for Java development. IntelliJ IDEA offers:
+
+- Advanced code analysis  
+- Integrated debugging  
+- Automated refactoring  
+- Seamless Maven support  
+
+The project structure and build process are fully compatible with IntelliJ IDEA's project model. All dependencies are managed via **Maven** (`pom.xml`), and the project can be imported directly into IntelliJ IDEA without additional configuration.
+
+
+### Required Plugins and Tools
+
+- **Maven**: Project build and dependency management via Apache Maven. Plugins used:
+  - `maven-compiler-plugin`
+  - `maven-jar-plugin`
+  - `maven-surefire-plugin`
+  - `org.openjfx:javafx-maven-plugin` (for JavaFX integration)
+
+- **JavaFX**: Used for the graphical user interface. Ensure the JavaFX plugin is enabled and the required JavaFX SDK is available in your environment.
+- **SnakeYAML**: Used for loading YAML configuration files. The dependency is included in `pom.xml`.
+
+
+### How to Build and Run
+
+1. Clone the repository and open it in **IntelliJ IDEA**.
+2. Import as a **Maven project** (automatic detection usually works).
+3. Use the **Maven lifecycle**:  
+   - `clean`  
+   - `compile`  
+   - `package`  
+4. Run the application:
+   - Via `mvn javafx:run`, **or**
+   - Directly from the IDE by running the `AppMain` class.
+
+No additional manual configuration is required—Maven resolves all dependencies.
